@@ -1,2 +1,2 @@
 web: npm start
-sequelize db:migrate
+sequelize sequelize db:migrate
