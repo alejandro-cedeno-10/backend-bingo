@@ -21,6 +21,6 @@
     "database": "d3dieqe9enmejf",
     "host": "ec2-3-231-194-96.compute-1.amazonaws.com",
     "port" : 5432,
-    "dialect": "postgres",
+    "dialect": "postgres"
  }
 }
