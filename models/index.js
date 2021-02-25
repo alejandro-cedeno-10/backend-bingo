@@ -8,6 +8,17 @@ const env = process.env.NODE_ENV || 'production';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
+const { Client } = require('pg');
+
+const client = new Client({
+  connectionString: config.use_env_variable,
+  ssl: {
+    rejectUnauthorized: false
+  }
+});
+
+client.connect();
+
 let sequelize;
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -33,6 +44,8 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+
 
 module.exports = db;
 
