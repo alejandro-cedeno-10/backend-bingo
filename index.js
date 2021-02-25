@@ -12,13 +12,6 @@ app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}`)
 })
 
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
 
 
 /* const bodyParser = require('body-parser');
