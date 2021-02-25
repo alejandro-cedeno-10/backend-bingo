@@ -8,16 +8,17 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
-const { Client } = require('pg');
+/* const { Client } = require('pg');
 
 const client = new Client({
   connectionString: config.use_env_variable,
   ssl: {
+    require: true,
     rejectUnauthorized: false
   }
 });
 
-client.connect();
+client.connect(); */
 
 let sequelize;
 if (config.use_env_variable) {
