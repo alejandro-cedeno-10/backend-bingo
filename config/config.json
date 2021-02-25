@@ -21,6 +21,6 @@
     "host": "ec2-18-204-74-74.compute-1.amazonaws.com",
     "port" : 5432,
       "ssl": true,
-    "protocol":"postgres"
+    "dialect":"postgres"
   }
 }
