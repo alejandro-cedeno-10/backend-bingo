@@ -25,7 +25,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "postinstall": "patch-package"
+    "postinstall": "npm i patch-package"
   },
   "keywords": [],
   "author": "",
