@@ -8,17 +8,19 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
-/* const { Client } = require('pg');
+const { Client } = require('pg');
 
 const client = new Client({
-  connectionString: config.use_env_variable,
-  ssl: {
-    require: true,
-    rejectUnauthorized: false
-  }
+  username: "mbjffjofvclkjt",
+  password: "04ef660693dc0d6d5c1e162ae9a56ec67d14aa4c1014eebd3fd1ae551a5172e3",
+  database: "d677aqsteobb8d",
+  host: "ec2-18-204-74-74.compute-1.amazonaws.com",
+  port : 5432,
+  ssl: true,
+  use_env_variable : "postgres://mbjffjofvclkjt:04ef660693dc0d6d5c1e162ae9a56ec67d14aa4c1014eebd3fd1ae551a5172e3@ec2-18-204-74-74.compute-1.amazonaws.com:5432/d677aqsteobb8d"
 });
 
-client.connect(); */
+client.connect();
 
 let sequelize;
 if (config.use_env_variable) {
